@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <br>
+    <p class="texto">Ingresa tus datos para crear su perfil</p><br>
+  </div>
+
+  <div class="ion-text-start" style="height: 50%;">
+    <ion-input type="text" fill="outline" placeholder="Nombre" [(ngModel)]="nombre" class="hold"></ion-input>  <br/>
+    <ion-input type="email" fill="outline" placeholder="Correo electronico"[(ngModel)]="email" class="hold"></ion-input>  <br>
+    <ion-input type="password" fill="outline" placeholder="Contraseña" [(ngModel)]="password" class="hold"></ion-input>  <br/>
+    <ion-button color="success" expand="block" (click)="validarLogin()" class="boton">Continuar</ion-button>
+  </div>
+
+  
+
+</ion-content>

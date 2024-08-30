@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="img">
+    <img alt="" src="assets/img/1.png">
+  </div>
+
+  <div class="texto">
+    <h1 class="ion-text-bold">¡Inicia sesión!</h1>
+    <p>Ingresa tus datos para acceder a tu perfil</p>
+  </div>
+
+  <div class="ion-text-start" >
+    <ion-input  type="email" fill="outline" placeholder="Correo Electronico"[(ngModel)]="email" class="hold"></ion-input>  <br>
+    <ion-input  type="password" fill="outline" placeholder="Contraseña" [(ngModel)]="password" class="hold"></ion-input>  <br/>
+    <ion-button color="success" expand="block" (click)="validarLogin()" class="boton">Continuar</ion-button >
+  </div>
+
+  <div>
+    <a [routerLink] = "['/registro']"class="link"><p>¿No tienes una cuenta?</p></a>
+    <a [routerLink] = "['/registro']" class="link"><p>¿Has olvidado tu contraseña?</p></a>
+  </div>
+
+</ion-content>

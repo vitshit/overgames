@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div class="img">
+  <img alt="" src="assets/img/foto.jpg">
+</div> 
+
+<ion-content>
+  <div>
+    <h1> Modifique sus datos del perfil</h1>
+    <ion-input  type="text" fill="outline" placeholder="{{usuario.nombre}} " [(ngModel)]="nombre" ></ion-input>  <br/>
+    <ion-input  type="email" fill="outline" placeholder="{{usuario.email}}" [(ngModel)]="email"></ion-input>  <br>
+    <ion-input  type="password" fill="outline" placeholder="Contraseña nueva" [(ngModel)]="password"></ion-input>  <br/>
+    <ion-input  type="password" fill="outline" placeholder="Confirmar contraseña" [(ngModel)]="password2"></ion-input>  <br/>
+  </div>
+
+  <div>
+    <ion-button color="success" expand="block" (click)="validarModificacion()" >Continuar</ion-button>
+  </div>
+</ion-content>
